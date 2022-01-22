@@ -1,0 +1,16 @@
+server:
+  port: 80
+
+spring:
+  application:
+    name: cloud-oreder-service
+
+eureka:
+  client:
+    #表示是否将自己注册到eurekaServer 服务端内 默认true
+    register-with-eureka: true
+    #是否从eurekaServer服务端 抓取已经注册的信息 默认true 。单节点无所谓 ，集群必须为true 才能配合ribbon 使用负载均衡
+    fetchRegistry: true
+    service-url:
+#      defaultZone: http://localhost:7001/eureka
+      defaultZone: http://eureka7001.com:7001/eureka,http://eureka7002.com:7002/eureka  #集群版
