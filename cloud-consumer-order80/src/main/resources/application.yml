@@ -4,7 +4,11 @@ server:
 spring:
   application:
     name: cloud-oreder-service
-
+  zipkin:
+    base-url: http://localhost:9411
+  sleuth:
+    sampler:
+      probability: 1
 eureka:
   client:
     #表示是否将自己注册到eurekaServer 服务端内 默认true

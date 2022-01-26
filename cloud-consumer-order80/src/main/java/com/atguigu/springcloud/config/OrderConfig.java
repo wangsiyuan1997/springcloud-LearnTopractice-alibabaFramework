@@ -12,7 +12,7 @@ import org.springframework.web.client.RestTemplate;
 public class OrderConfig {
 
     @Bean
-   // @LoadBalanced//赋予RestTemplate 负载均衡注解的能力
+    @LoadBalanced//赋予RestTemplate 负载均衡注解的能力
     public RestTemplate restTemplate(){
         return new RestTemplate();
     }
